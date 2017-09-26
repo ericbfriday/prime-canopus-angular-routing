@@ -1,3 +1,8 @@
-myApp.controller('BlueController', function() {
-   console.log('in blue controller');
+myApp.controller('BlueController', function(ThingService) {
+   console.log('in blue controller', ThingService.blueThings);
+
+   var vm = this;
+
+   vm.blueStuff = ThingService.blueThings;
+
 });
