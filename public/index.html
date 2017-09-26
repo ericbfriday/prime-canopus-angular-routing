@@ -11,14 +11,17 @@
     <script src="scripts/controllers/blue.controller.js"></script>
     <script src="scripts/controllers/red.controller.js"></script>
     
+    <!-- only for removing the #! -->
+    <base href="/">
+
     <title>Document</title>
 </head>
 <body ng-app="myApp">
     <nav>
         <ul>
-            <li><a href="#!/">Home</a></li>
-            <li><a href="#!/blue">Blue</a></li>
-            <li><a href="#!/red">Red</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/blue">Blue</a></li>
+            <li><a href="/red">Red</a></li>
         </ul>
     </nav>
     <ng-view></ng-view>
