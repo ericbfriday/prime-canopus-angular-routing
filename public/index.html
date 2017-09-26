@@ -5,16 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="vendors/angular.min.js"></script>
+    <script src="vendors/angular-route.min.js"></script>
     <script src="scripts/client.js"></script>
+    <script src="scripts/controllers/home.controller.js"></script>
     <script src="scripts/controllers/blue.controller.js"></script>
     <script src="scripts/controllers/red.controller.js"></script>
     
     <title>Document</title>
 </head>
 <body ng-app="myApp">
-    <section ng-controller="BlueController as bc"></section>
-    <section ng-controller="RedController as rc"></section>
-    test
-    
+    <nav>
+        <ul>
+            <li><a href="#!/">Home</a></li>
+            <li><a href="#!/blue">Blue</a></li>
+            <li><a href="#!/red">Red</a></li>
+        </ul>
+    </nav>
+    <ng-view></ng-view>
 </body>
 </html>
