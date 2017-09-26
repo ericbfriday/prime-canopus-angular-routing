@@ -8,4 +8,7 @@
 
     <button ng-click="bc.clickUpdate()">CLICK ME</button>
     <div>Count: {{bc.countObj.count}}</div>
+
+    <!-- bc.serverStuff.list is the array of string things -->
+    <div ng-repeat="oneThing in bc.serverStuff.list">{{oneThing}}</div>
 </section>

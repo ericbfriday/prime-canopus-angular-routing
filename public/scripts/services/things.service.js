@@ -1,4 +1,4 @@
-myApp.service('ThingService', function () {
+myApp.service('ThingService', function ($http) {
     console.log('in ThingService');
 
     var self = this;
@@ -15,4 +15,14 @@ myApp.service('ThingService', function () {
         self.countObj.count++;
     }
 
+    self.serverThings = {list: []};
+
+    self.getServerThings = function() {
+        $http.get('/serverThings').then(function(response) {
+            // set our data onto the service
+            console.log('response.data -> ', response.data);
+            
+            self.serverThings.list = response.data;
+        });
+    }
 });

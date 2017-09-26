@@ -3,6 +3,10 @@ myApp.controller('BlueController', function (ThingService) {
 
     var vm = this;
 
+    // when controller loads, call getServerThings function in our service
+    ThingService.getServerThings();
+    vm.serverStuff = ThingService.serverThings;
+
     vm.blueStuff = ThingService.blueThings;
     vm.countObj = ThingService.countObj;
 
@@ -10,4 +14,5 @@ myApp.controller('BlueController', function (ThingService) {
         console.log('log in clickUpdate');
         ThingService.incCounter();
     }
+
 });
